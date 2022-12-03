@@ -1,11 +1,11 @@
 const router = require('express').Router()
-const { Monster, BodyPart, Monster } = require('../../models')
+const { Monster, BodyPart } = require('../../models')
 
 //Get all
 router.get('/', async (req, res) => {
     try {
         const monster = await Monster.findAll({
-            include: [BodyPart]
+            include: [{ model: BodyPart }]
         })
     }
     catch (err) {

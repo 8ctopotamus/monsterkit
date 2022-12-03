@@ -12,8 +12,8 @@ const bodyPartKeywords = [
   'arm'
 ]
 
-sequelize.sync({force: true}).then(async () => {
-  const filenames = fs.readdirSync(path.join(__dirname, '..', 'assets', 'kenney_monsterbuilderpack', 'PNG', 'Default'))
+sequelize.sync({ force: true }).then(async () => {
+  const filenames = fs.readdirSync(path.join(__dirname, '..', 'public', 'assets', 'kenney_monsterbuilderpack', 'PNG', 'Default'))
 
   const bodyPartSeeds = filenames
     .filter(fileName => {
@@ -34,13 +34,13 @@ sequelize.sync({force: true}).then(async () => {
 
   await Monster.create({
     name: 'Mike Wazowski',
-    arm: 1,
-    leg: 84,
-    body: 31,
-    eye: 83,
-    numEyes: 1,
-    mouth: 114,
-    nose: 121
+    arm_id: 1,
+    leg_id: 84,
+    body_id: 31,
+    eye_id: 83,
+    num_eyes: 1,
+    mouth_id: 114,
+    nose_id: 121
   })
 })
 

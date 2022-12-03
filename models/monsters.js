@@ -1,59 +1,59 @@
 const { DataTypes, Model } = require('sequelize')
 const sequelize = require('../config/connection')
 
-class Monster extends Model {}
+class Monster extends Model { }
 
 Monster.init({
   name: {
     type: DataTypes.STRING,
     allowNull: false,
   },
-  arm: {
+  arm_id: {
     type: DataTypes.INTEGER,
     references: {
       model: 'BodyParts',
       key: 'id'
     }
   },
-  leg: {
+  leg_id: {
     type: DataTypes.INTEGER,
     references: {
       model: 'BodyParts',
       key: 'id'
     }
   },
-  body: {
+  body_id: {
     type: DataTypes.INTEGER,
     references: {
       model: 'BodyParts',
       key: 'id'
     }
   },
-  eye: {
+  eye_id: {
     type: DataTypes.INTEGER,
     references: {
       model: 'BodyParts',
       key: 'id'
     }
   },
-  numEyes: {
+  num_eyes: {
     type: DataTypes.INTEGER,
     default: 0,
   },
-  mouth: {
+  mouth_id: {
     type: DataTypes.INTEGER,
     references: {
       model: 'BodyParts',
       key: 'id'
     }
   },
-  nose: {
+  nose_id: {
     type: DataTypes.INTEGER,
     references: {
       model: 'BodyParts',
       key: 'id'
     }
   }
-}, { sequelize })
+}, { sequelize, underscored: true })
 
 module.exports = Monster
