@@ -1,0 +1,19 @@
+<!-- Loop over each object in the projects array -->
+{{#each monsters as |monster| }}
+<div class="row mb-4 project">
+  <div class="col-md-5">
+    <h2>
+     
+      <a href="/monster/{{monster.id}}">{{monster.name}}</a>
+    </h2>
+    <p>
+      <span for="img" aria-label="monster">🦖</span>
+    
+  </div>
+  <div class="col-md-7">
+    <p>
+      {{monster.description}}
+    </p>
+  </div>
+</div>
+{{/each}}
