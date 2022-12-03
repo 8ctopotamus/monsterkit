@@ -1,4 +1,4 @@
-const { DataTypes, Model } = require()
+const { DataTypes, Model } = require('sequelize')
 const sequelize = require('../config/connection')
 
 class BodyPart extends Model {}
@@ -12,4 +12,9 @@ BodyPart.init({
     type: DataTypes.STRING,
     allowNull: false,
   }
-}, { sequelize })
+}, { 
+  sequelize,
+  timestamps: false,
+})
+
+module.exports = BodyPart
