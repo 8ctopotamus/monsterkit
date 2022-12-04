@@ -15,7 +15,7 @@ const bodyPartKeywords = [
 sequelize.sync({ force: true }).then(async () => {
   const filenames = fs.readdirSync(path.join(__dirname, '..', 'public', 'assets', 'kenney_monsterbuilderpack', 'PNG', 'Default'))
 
-  const bodyPartSeeds = filenames
+ let bodyPartSeeds = filenames
     .filter(fileName => {
       const splitFileName = fileName.split('_') // ['arm', 'blue]
       const foundKeyword = splitFileName.find(piece => bodyPartKeywords.includes(piece))
@@ -30,7 +30,11 @@ sequelize.sync({ force: true }).then(async () => {
       }
     })
 
+   
+
   await BodyPart.bulkCreate(bodyPartSeeds)
+  // console.log(bodyPartSeeds)
+
 
   await Monster.create({
     name: 'Mike Wazowski',
@@ -38,9 +42,22 @@ sequelize.sync({ force: true }).then(async () => {
     leg_id: 84,
     body_id: 31,
     eye_id: 83,
-    num_eyes: 1,
-    mouth_id: 114,
+    num_eyes: 30,
+    mouth_id: 100,
     nose_id: 121
   })
+
+  // await Monster.create({
+  //   name: 'Monster',
+  //   arm_id: 30,
+  //   leg_id: 94,
+  //   body_id: 3,
+  //   eye_id: 85,
+  //   num_eyes: 90,
+  //   mouth_id: 111,
+  //   nose_id: 120
+  // })
 })
+
+
 

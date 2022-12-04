@@ -12,7 +12,7 @@ Monster.init({
     type: DataTypes.INTEGER,
     references: {
       model: 'BodyParts',
-      key: 'id'
+      key: 'id',
     }
   },
   leg_id: {

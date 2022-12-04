@@ -7,23 +7,23 @@ BodyPart.belongsTo(Monster, {
 })
 
 // BodyPart.belongsTo(Monster, {
-//   foreignKey: 'leg'
+//   foreignKey: 'leg_id'
 // })
 
 // BodyPart.belongsTo(Monster, {
-//   foreignKey: 'body'
+//   foreignKey: 'body_id'
 // })
 
 // BodyPart.belongsTo(Monster, {
-//   foreignKey: 'eye'
+//   foreignKey: 'eye_id'
 // })
 
 // BodyPart.belongsTo(Monster, {
-//   foreignKey: 'mouth'
+//   foreignKey: 'mouth_id'
 // })
 
 // BodyPart.belongsTo(Monster, {
-//   foreignKey: 'nose'
+//   foreignKey: 'nose_id'
 // })
 
 Monster.hasOne(BodyPart, {
@@ -31,24 +31,24 @@ Monster.hasOne(BodyPart, {
 })
 
 // Monster.hasMany(BodyPart, {
-//   foreignKey: 'leg'
+//   foreignKey: 'leg_id'
 // })
 
 // Monster.hasOne(BodyPart, {
-//   foreignKey: 'body'
+//   foreignKey: 'body_id'
 // })
 // // EDITED
 
 // Monster.hasMany(BodyPart, {
-//   foreignKey: 'eye'
+//   foreignKey: 'eye_id'
 // })
 
 // Monster.hasMany(BodyPart, {
-//   foreignKey: 'mouth'
+//   foreignKey: 'mouth_id'
 // })
 
 // Monster.hasMany(BodyPart, {
-//   foreignKey: 'nose'
+//   foreignKey: 'nose_id'
 // })
 
 module.exports = {
