@@ -47,10 +47,10 @@ sequelize.sync({ force: true }).then(async () => {
     name: 'Monster 2',
     arm_id: 30,
     leg_id: 94,
-    body_id: 3,
-    eye_id: 85,
+    body_id: 63,
+    eye_id: 80,
     num_eyes: 3,
-    mouth_id: 113,
+    mouth_id: 116,
     nose_id: 120
   })
 
