@@ -1,0 +1,26 @@
+.left-arm,
+.left-leg {
+  transform: scaleX(-1);
+}
+
+.monster .body {
+  position: relative;
+}
+
+.monster .eyes {
+  position: absolute;
+  top: -3%;
+  left: 30%;
+}
+
+.monster .nose {
+  position: absolute;
+  top: 45%;
+  left: 35%;
+}
+
+.monster .mouth {
+  position: absolute;
+  top: 75%;
+  left: 35%;
+}

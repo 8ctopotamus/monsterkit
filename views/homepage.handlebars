@@ -1,18 +1,8 @@
-<!-- Loop over each object in the projects array -->
 <div class="row mb-4 project">
-
   {{#each monsters as |monster| }}
-
-  <div class="col-md-4">
-    <img src='/assets/kenney_monsterbuilderpack/PNG/Default/{{monster.arm.fileName}}' />
-    <img src='/assets/kenney_monsterbuilderpack/PNG/Default/{{monster.leg.fileName}}' />
-    <img src='/assets/kenney_monsterbuilderpack/PNG/Default/{{monster.eye.fileName}}' />
-    <img src='/assets/kenney_monsterbuilderpack/PNG/Default/{{monster.body.fileName}}' />
-    <img src='/assets/kenney_monsterbuilderpack/PNG/Default/{{monster.mouth.fileName}}' />
-    <img src='/assets/kenney_monsterbuilderpack/PNG/Default/{{monster.nose.fileName}}' />
-
-  </div>
-
+    <div class="col-md-4">
+      {{> monster }}
+      <h3>{{monster.name}}</h3>
+    </div>
   {{/each}}
-
 </div>

@@ -30,11 +30,7 @@ sequelize.sync({ force: true }).then(async () => {
       }
     })
 
-   
-
   await BodyPart.bulkCreate(bodyPartSeeds)
-  // console.log(bodyPartSeeds)
-
 
   await Monster.create({
     name: 'Mike Wazowski',
@@ -42,21 +38,24 @@ sequelize.sync({ force: true }).then(async () => {
     leg_id: 84,
     body_id: 31,
     eye_id: 83,
-    num_eyes: 30,
-    mouth_id: 100,
+    num_eyes: 1,
+    mouth_id: 114,
     nose_id: 121
   })
 
-  // await Monster.create({
-  //   name: 'Monster',
-  //   arm_id: 30,
-  //   leg_id: 94,
-  //   body_id: 3,
-  //   eye_id: 85,
-  //   num_eyes: 90,
-  //   mouth_id: 111,
-  //   nose_id: 120
-  // })
+  await Monster.create({
+    name: 'Monster 2',
+    arm_id: 30,
+    leg_id: 94,
+    body_id: 3,
+    eye_id: 85,
+    num_eyes: 3,
+    mouth_id: 113,
+    nose_id: 120
+  })
+
+  console.log('DB seeded!')
+  process.exit(0)
 })
 
 
